@@ -26,7 +26,7 @@ class AuthHandler():
             return payload
 
         except Exception as e:
-            raise HTTPException(status_code=400, detail=e)
+            raise HTTPException(status_code=400, detail="Invalid access token")
 
     def authentificate_admin(self, access_token, db):
         payload = self.decode_token(access_token, db)
@@ -46,6 +46,7 @@ class AuthHandler():
         payload = self.decode_token(access_token, db)
 
         tg_id = payload.get("sub")
+        print(tg_id)
         isAdmin = payload.get("isAdmin")
 
         user = UserServices.get_user(tg_id, db)

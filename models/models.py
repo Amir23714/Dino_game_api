@@ -28,3 +28,11 @@ class User(Base):
     experience = Column(Integer, index=True)
 
     isAdmin = Column(Boolean, index=True, default=False)
+
+
+class WorkingUsers(Base):
+    __tablename__ = "working_users"
+    id = Column(Integer, index=True, primary_key=True)
+    telegram_id = Column(String, index=True, unique=True)
+    working_status = Column(String, index=True)
+    finish = Column(Integer, index=True)

@@ -26,7 +26,7 @@ git clone link
 pip install -r requirements.txt
 ```
 
-3. Create .env file with all neccessary variables(optional)
+3. Create .env file with all neccessary variables. It is neccessary to set your own telegram api TOKEN
 
 ### Alembic configuration
 4. Initialize alembic migrations
@@ -51,6 +51,11 @@ alembic upgrade head
 8. Run the app
 ```bash
 uvicorn main:app --reload  
+```
+
+9. Run the telegram bot from the telegram directory
+```bash
+python tg_bot.py
 ```
  
 
