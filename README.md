@@ -17,7 +17,7 @@ Before you start using this project, make sure you have Python installed on your
 1. Сlone the repository to the target folder where the project should be located
 
 ```bash
-git clone link
+git clone https://github.com/Amir23714/Dino_game_api.git
 ```
 
 2. Install requirements
